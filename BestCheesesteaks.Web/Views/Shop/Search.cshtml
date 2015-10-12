@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Shop>
+@{
+    ViewBag.Title = "Search";
+}
+
+<div class="section" style="padding-left: 30px;">
+  <h2>Search for a Steak  <img src="~/images/Powered_By_Yelp_White.png" alt="Powered By Yelp" /></h2>
+
+
+  @foreach (var shop in Model)
+  {
+    <div class="row" style="border-bottom: 1px solid yellow; padding: 3px;">
+
+      <div class="col-md-2">
+        <img src="@shop.ImageUrl" />
+      </div>
+      <div class="col-md-6">
+        <h4>@shop.Name</h4>
+        @shop.Address<br/>
+        @shop.Address2
+      </div>
+      <div class="col-md-4">
+        <img src="@shop.RatingUrl" alt="@shop.Rating" />
+        <br/>
+        @shop.Review_Count reviews
+      </div>
+
+  </div>
+  }
+
+
+</div>

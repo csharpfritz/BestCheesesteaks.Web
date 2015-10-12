@@ -1,0 +1,118 @@
+@import "variables.less";
+
+body {
+	background-color: @bgColor;
+	margin: 0px;
+	padding: 0px;
+}
+
+h1 {
+	color: @accentColor;
+	text-decoration: underline;
+}
+
+.section {
+	width: 100%;
+	background-color: @mainColor;
+	color: @mainTextColor;
+	padding: 3px 5px;
+	margin-bottom: 5px;
+}
+
+#masthead {
+	min-height: 300px;
+	position: relative;
+	background-image: url('/images/masthead-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: -400px -100px;
+	color: #000;
+  padding-bottom: 30px;
+}
+
+#mastheadSmall {
+	min-height: 50px;
+	position: relative;
+	background-image: url('/images/masthead-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: -400px -100px;
+	color: #000;
+}
+
+/** MENU **/
+nav.bottomBar {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	background-color: @mainColor;
+	display: block;
+	min-height: 25px;
+}
+
+ul.menu {
+	
+	min-width: 400px;
+	
+	li { 
+		list-style: none;
+		float: left;
+		margin: 2px 9px;
+		&.active {
+			border-bottom: 1px solid @menuActiveColor;
+			a {
+				color: @menuActiveColor;
+			}
+		}
+		a {
+			color: @menuTextColor;
+			text-decoration: none;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			font-weight: bold;
+		}
+	}
+}
+
+ul.staticMenu {
+	background-color: @bgColor!important;
+	width: 100%;
+	position: fixed;
+	height: 3em;
+	top: 0em;
+	
+	li { 
+		list-style: none;
+		float: left;
+		margin: 2px 9px;
+		padding-bottom: 0px;
+		height: 1.5em;	
+		color: @menuTextColor;
+		&.active {
+			border-bottom: 1px solid @menuTextColor;
+		}
+		&.caption {
+			font-size: 1.1em;
+			color: #000;
+			font-weight: bold;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		a {
+			color: @menuTextColor;
+			text-decoration: none;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			font-size: 0.9em;
+			font-weight: bold;
+		}
+	}
+
+}
+
+/** FOOTER **/
+footer {
+	width: 100%;
+	color: @footerTextColor;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	text-align: center;
+	padding: 4px 0px 20px 0px;
+}
+
+
